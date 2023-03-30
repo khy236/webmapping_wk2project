@@ -1,0 +1,94 @@
+<!-- 
+    NOTES 3/30/2023
+    html:5 loads automatic html5 template
+    left-click and 'format document' tidies up code -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- link to css style sheet -->
+
+    <!-- title and instructions -->
+
+    <h1>send remy to france!</h1>
+    <p>maximize your browser, then move him with your arrow keys </p>
+    <p>or the buttons to the landing dock</p>
+
+
+</head>
+
+<body>
+
+    <!-- images -->
+
+    <img id="remy" src="https://img5.goodfon.com/wallpaper/nbig/f/1c/krysa-mysh-myshka-chernyi-fon.jpg">
+
+    <img id="france"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Eiffel-tower-2008.png/1200px-Eiffel-tower-2008.png">
+
+    <img id="eric"
+        src="https://pyxis.nymag.com/v1/imgs/f08/15c/3427b52d371532a596b1596b1c0d092403-eric-adams-lede.rvertical.w570.jpg">
+
+
+    <!-- navigation buttons -->
+
+    <div id="left" class="arrow-button">
+        <div class="button-name">
+            ←
+        </div>
+    </div>
+
+    <div id="right" class="arrow-button">
+        <div class="button-name">
+            →
+        </div>
+    </div>
+
+    <div id="up" class="arrow-button">
+        <div class="button-name">
+            ↑
+        </div>
+    </div>
+
+    <div id="down" class="arrow-button">
+        <div class="button-name">
+            ↓
+        </div>
+    </div>
+
+    <div id="home" class="arrow-button">
+        <div class="button-name">
+            send remy home
+        </div>
+    </div>
+
+
+    <!-- landing dock -->
+
+    <div class="dock">
+        ------------
+        <p>↑
+        <p>
+        <p>#1 parisian rat landing dock
+        <p>
+    </div>
+
+
+    <!-- landing dock -->
+
+    <div class="popup" id=eric_message>
+        thank you for sending another rat packing!
+    </div>
+
+
+</body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> <!-- load jquery -->
+    <script src="js/script.js"></script> <!-- usually input js tag after body -->
+
+</html>

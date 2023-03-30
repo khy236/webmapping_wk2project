@@ -1,0 +1,117 @@
+/* title and instructions */
+
+body {
+    font-size: 12px;
+    font-family: "Lucida Console", Monaco, monospace;
+    color: white;
+    font-weight: normal;
+    background: black;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+  
+  
+  /* images */
+  
+  #remy {
+    position: relative;
+    width: 150px;
+    float: left;
+    transform: scaleX(-1);
+  }
+  
+  #france {
+    width: 600px;
+    float: left;
+  }
+  
+  
+  /* popup */
+  
+  .popup {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  #eric {
+    width: 130px;
+    transform: scaleX(-1);
+    position: absolute;
+    top: 160px;
+    right: 0px;
+  }
+  
+  #eric_message {
+    color: white;
+    position: absolute;
+    top: 200px;
+    right: 120px;
+  
+  }
+  
+  /* buttons */
+  
+  .arrow-button {
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 6px;
+    width: 14px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .arrow-button:hover {
+    cursor: pointer;
+    background-color: #989ea6;
+    color: black;
+  }
+  
+  .button-name {
+    font-size: 12px;
+  }
+  
+  #left {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+  }
+  
+  #right {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+  }
+  
+  #down {
+    position: absolute;
+    top: 50px;
+    right: 70px;
+  }
+  
+  #up {
+    position: absolute;
+    top: 18px;
+    right: 70px;
+  }
+  
+  #home {
+    width: 50px;
+    position: absolute;
+    top: 18px;
+    left: 50px;
+  }
+  
+  
+  /* landing dock */
+  
+  .dock {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 460px;
+    right: 0px;
+  }
+  
