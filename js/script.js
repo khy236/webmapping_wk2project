@@ -1,3 +1,5 @@
+//get location of landing dock
+
 // set variables
 
 var remy = document.getElementById('remy');
@@ -20,45 +22,22 @@ $('#eric').css('opacity', 0);
 $('#eric_message').css('opacity', 0);
 
 
-// button functionality
+// move functions
 
-left.onclick = function() {
-  hor_position -= 20;
+function move(hor, vert) {
+  hor_position += hor;
   remy.style.left = hor_position + 'px';
-  if (vert_position === 280 && hor_position >= 500 && hor_position <= 560) {
-    $('#eric').css('opacity', 1);
-    $('#eric_message').css('opacity', 1)
-  }
-}
-
-right.onclick = function() {
-  hor_position += 20;
-  remy.style.left = hor_position + 'px';
-  if (vert_position === 280 && hor_position >= 500 && hor_position <= 560) {
-    $('#eric').css('opacity', 1);
-    $('#eric_message').css('opacity', 1)
-  }
-}
-
-up.onclick = function() {
-  vert_position -= 20;
+  vert_position += vert;
   remy.style.top = vert_position + 'px';
-  if (vert_position === 280 && hor_position >= 500 && hor_position <= 560) {
+  console.log(hor_position);
+  console.log(vert_position);
+  if (vert_position === 380 && hor_position >= 580 && hor_position <= 640) {
     $('#eric').css('opacity', 1);
     $('#eric_message').css('opacity', 1)
   }
 }
 
-down.onclick = function() {
-  vert_position += 20;
-  remy.style.top = vert_position + 'px';
-  if (vert_position === 280 && hor_position >= 500 && hor_position <= 560) {
-    $('#eric').css('opacity', 1);
-    $('#eric_message').css('opacity', 1)
-  }
-}
-
-home.onclick = function() {
+function go_home() {
   hor_position = 0;
   vert_position = 0;
   remy.style.left = hor_position;
@@ -68,40 +47,32 @@ home.onclick = function() {
 }
 
 
-// keyboard functionality
+// button and keyboard functionality
 
-$(document).keydown(function(e) {
-  if (e.keyCode === 37) { // left
-    hor_position -= 20;
-    remy.style.left = hor_position + 'px';
-    if (vert_position === 280 && hor_position >= 500 && hor_position <= 560) {
-      $('#eric').css('opacity', 1);
-      $('#eric_message').css('opacity', 1)
+$(document).ready(function () {
+
+  // buttons
+
+  left.onclick = function () { move(-20, 0) }
+  right.onclick = function () { move(20, 0) }
+  up.onclick = function () { move(0, -20) }
+  down.onclick = function () { move(0, 20) }
+  home.onclick = function () { go_home() }
+
+
+  // keyboard 
+
+  $(document).keydown(function (e) {
+    if (e.keyCode === 37) { // left
+      move(-20, 0)
+    } else if (e.keyCode === 38) { // up
+      move(0, -20)
+    } else if (e.keyCode === 39) { // right
+      move(20, 0)
+    } else if (e.keyCode === 40) { // down
+      move(0, 20)
+    } else if (e.keyCode === 13) { // enter
+      go_home()
     }
-  } else if (e.keyCode === 38) { // up
-    vert_position -= 20;
-    remy.style.top = vert_position + 'px';
-    if (vert_position === 280 && hor_position >= 500 && hor_position <= 560) {
-      $('#eric').css('opacity', 1);
-      $('#eric_message').css('opacity', 1)
-    }
-  } else if (e.keyCode === 39) { // right
-    hor_position += 20;
-    remy.style.left = hor_position + 'px';
-    if (vert_position === 280 && hor_position >= 500 && hor_position <= 560) {
-      $('#eric').css('opacity', 1);
-      $('#eric_message').css('opacity', 1)
-      console.log(hor_position);
-      console.log(vert_position);
-    }
-  } else if (e.keyCode === 40) { // down
-    vert_position += 20;
-    remy.style.top = vert_position + 'px';
-    if (vert_position === 280 && hor_position >= 500 && hor_position <= 560) {
-      $('#eric').css('opacity', 1);
-      $('#eric_message').css('opacity', 1)
-      console.log(hor_position);
-      console.log(vert_position);
-    }
-  }
+  });
 });
